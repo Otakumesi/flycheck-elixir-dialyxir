@@ -1,4 +1,4 @@
-# flycheck-dialyzer ― Flycheck for Dialixir
+# flycheck-elixir-dialyzer ― Flycheck for Dialixir
 
 ## Summary
 This package is a [FlyCheck](http://www.flycheck.org/en/latest/) interface to [Dialyxir](http://github.com/jeremyjh/dialyxir).  
