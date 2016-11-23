@@ -25,13 +25,12 @@
 (flycheck-define-checker elixir-dialyxir
   "Elixir Static Analysis Checker."
   :command ("mix" "dialyzer" "--fullpath")
-  :standard-input t
   :working-directory flycheck-elixir-dialyxir--mix-project-root
-  :error-patterns ((warning line-start (file-name) ":" line ":" (message) line-end))
+  :error-patterns ((info line-start (file-name) ":" line ": " (message) line-end))
   :modes elixir-mode
-  :next-checker ((warning . elixir)))
+  :next-checkers (elixir elixir-dogma))
 
-(add-to-list 'flycheck-checkers 'elixir-dialixir  t)
+(add-to-list 'flycheck-checkers 'elixir-dialixir)
 
 (provide 'flycheck-elixir-dialyxir)
 ;;; flycheck-elixir-dialyxir.el ends here
