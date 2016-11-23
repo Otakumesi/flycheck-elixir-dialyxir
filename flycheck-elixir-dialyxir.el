@@ -27,9 +27,9 @@
   :command ("mix" "dialyzer" "--fullpath")
   :standard-input t
   :working-directory flycheck-elixir-dialyxir--mix-project-root
-  :error-patterns ((info line-start (file-name) ":" line ":" (message) line-end))
+  :error-patterns ((warning line-start (file-name) ":" line ":" (message) line-end))
   :modes elixir-mode
-  :next-checker ((info . elixir)))
+  :next-checker ((warning . elixir)))
 
 (add-to-list 'flycheck-checkers 'elixir-dialixir  t)
 
